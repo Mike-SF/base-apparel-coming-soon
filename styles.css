@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --desaturated-red: #ce9898;
+  --soft-red: #f96464;
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  min-width: 375px;
+  width: 100vw;
+  display: grid;
+}
+
+
+.logo {
+  margin: 2rem;
+}
+
+.logo img {
+  height: 1.5rem;
+}
+
+.hero picture img {
+  width: 100%;
+}
+
+
+.text_block {
+  margin: 3rem 2rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    height: auto;
+  }
+  .text_block {
+    margin-top: 0;
+  }
+}
+
+.text_block__title .highlight {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+p.text {
+  color: var(--desaturated-red);
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.email_wrapper {
+  border: 1px solid var(--desaturated-red);
+  border-radius: 50px;
+  margin: 0 3rem;
+  height: 3rem;
+  position: relative;
+}
+
+.email_wrapper.error {
+    border: 2px solid var(--soft-red);
+}
+
+
+#email_block {
+  border: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  width: 90%;
+  height: 2rem;
+}
+
+#email_block::placeholder {
+  color: var(--desaturated-red);
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+#email_block:focus {
+  outline: none;
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: black;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 50px;
+  transform: translate(2px, -1px);
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.error_icon {
+  position: absolute;
+  top: 0.6rem;
+  right: 4.5rem;
+  visibility: hidden;
+}
+
+.error_icon.error {
+  visibility: visible;
+}
+
+.error_msg {
+  color: var(--desaturated-red);
+  font-weight: 300;
+  margin-left: 4rem;
+  margin-top: 0;
+  visibility: hidden;
+}
+
+.error_msg.error {
+  visibility: visible;
+  color: var(--soft-red)
+}
+
+.error_msg p {
+  margin-top: 0.5rem;
+}
+
+.attribution {
+  visibility: visible;
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="base-logo" />
+      </div>
+      <div class="hero">
+        <picture>
+          <source
+            srcset="./images/hero-desktop.jpg"
+            media="(min-width: 640px)"
+          />
+          <img src="./images/hero-mobile.jpg" alt="female-model" />
+        </picture>
+      </div>
+      <div class="main">
+        <section class="text_block">
+          <div class="text_block__title">
+            <h1><span class="highlight">we're</span></h1>
+            <h1>coming</h1>
+            <h1>soon</h1>
+          </div>
+          <p class="text">
+            We're coming soon Hello fellow shoppers! We're currently building
+            our new fashion store. Add your email below to stay up-to-date with
+            announcements and our launch deals.
+          </p>
+        </section>
+        <section class="email">
+          <div class="email_wrapper">
+            <input
+              type="email"
+              name="email"
+              id="email_block"
+              placeholder="Email Address"
+            />
+            <button class="button">
+              <img src="./images/icon-arrow.svg" alt="arrow button" />
+            </button>
+            <img
+              src="./images/icon-error.svg"
+              alt="error icon"
+              class="error_icon"
+            />
+          </div>
+          <div class="error_msg">
+            <p>Please provide a valid email</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Mike@J4C</a>.
+      </p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
