@@ -3,17 +3,12 @@
 :root {
   --desaturated-red: #ce9898;
   --soft-red: #f96464;
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
+  --white: #fff;
+  --black: #000;
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -41,7 +36,6 @@ p {
   display: grid;
 }
 
-
 .logo {
   margin: 2rem;
 }
@@ -54,13 +48,12 @@ p {
   width: 100%;
 }
 
-
 .text_block {
   margin: 3rem 2rem;
   text-align: center;
 }
 
-@media (min-width: 640px) {
+@media only screen and (min-width: 1024px) {
   .container {
     grid-template-columns: 1fr 1fr;
   }
@@ -94,10 +87,9 @@ p.text {
   position: relative;
 }
 
-.email_wrapper.error {
-    border: 2px solid var(--soft-red);
+.email_wrapper.invalid {
+  border: 2px solid var(--soft-red);
 }
-
 
 #email_block {
   border: none;
@@ -123,7 +115,6 @@ p.text {
   right: 0;
   top: 0;
   border: none;
-  background-color: black;
   width: 4rem;
   height: 3rem;
   border-radius: 50px;
@@ -133,34 +124,48 @@ p.text {
 
 .button:hover {
   cursor: pointer;
+  opacity: .5;
 }
 
-.error_icon {
+.invalid_icon {
   position: absolute;
   top: 0.6rem;
   right: 4.5rem;
+}
+
+.invalid_icon.hidden {
   visibility: hidden;
 }
 
-.error_icon.error {
+.invalid_icon.invalid {
   visibility: visible;
 }
 
-.error_msg {
-  color: var(--desaturated-red);
-  font-weight: 300;
+.msg {
+  font-weight: 600;
   margin-left: 4rem;
   margin-top: 0;
+  position: relative;
+}
+
+p.msg_valid {
+  color: var(--dark-gray);
+  visibility: visible;
+  position: absolute;
+}
+
+p.msg_valid.hidden {
   visibility: hidden;
 }
 
-.error_msg.error {
+p.msg_invalid {
+  color: var(--soft-red);
   visibility: visible;
-  color: var(--soft-red)
+  position: absolute;
 }
 
-.error_msg p {
-  margin-top: 0.5rem;
+p.msg_invalid.hidden {
+  visibility: hidden;
 }
 
 .attribution {
@@ -172,4 +177,3 @@ p.text {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-

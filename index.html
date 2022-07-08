@@ -24,7 +24,7 @@
         <picture>
           <source
             srcset="./images/hero-desktop.jpg"
-            media="(min-width: 640px)"
+            media="(min-width: 1024px)"
           />
           <img src="./images/hero-mobile.jpg" alt="female-model" />
         </picture>
@@ -50,17 +50,18 @@
               id="email_block"
               placeholder="Email Address"
             />
-            <button class="button">
+            <button type="submit" class="button">
               <img src="./images/icon-arrow.svg" alt="arrow button" />
             </button>
             <img
               src="./images/icon-error.svg"
               alt="error icon"
-              class="error_icon"
+              class="invalid_icon hidden"
             />
           </div>
-          <div class="error_msg">
-            <p>Please provide a valid email</p>
+          <div class="msg">
+            <p class="msg_invalid hidden">Please provide a valid email.</p>
+            <p class="msg_valid hidden">Email registered for updates</p>
           </div>
         </section>
       </div>

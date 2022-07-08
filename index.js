@@ -1,21 +1,48 @@
 const button = document.querySelector('.button')
-const error_icon = document.querySelector('.error_icon')
-const error_msg = document.querySelector('.error_msg')
-const error_outline = document.querySelector('.email_wrapper')
+const invalid_icon = document.querySelector('.invalid_icon')
+const msg_invalid = document.querySelector('.msg_invalid')
+const msg_valid = document.querySelector('.msg_valid')
 const emailAddress = document.querySelector('#email_block')
+const email_wrapper = document.querySelector('.email_wrapper')
 
 button.addEventListener('click', () => {
-  if (emailIsValid(emailAddress.value)) {
-    console.log('email address good')
+  validate()
+})
+
+emailAddress.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    validate()
   } else {
-    emailError()
+    reset()
   }
 })
 
-function emailError() {
-  error_icon.classList.add('error')
-  error_msg.classList.add('error')
-  error_outline.classList.add('error')
+function validate() {
+  if (emailIsValid(emailAddress.value)) {
+    emailValid()
+    emailAddress.value = ''
+  } else {
+    emailInValid()
+  }
+}
+
+function emailValid() {
+  console.log('email address valid')
+  msg_valid.classList.remove('hidden')
+}
+
+function emailInValid() {
+  console.log('email address invalid')
+  invalid_icon.classList.remove('hidden')
+  msg_invalid.classList.remove('hidden')
+  email_wrapper.classList.add('invalid')
+}
+
+function reset() {
+  invalid_icon.classList.add('hidden')
+  msg_valid.classList.add('hidden')
+  msg_invalid.classList.add('hidden')
+  email_wrapper.classList.remove('invalid')
 }
 
 function emailIsValid(email) {
