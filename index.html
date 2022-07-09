@@ -15,11 +15,11 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <div class="container">
-      <div class="logo">
+    <main class="container">
+      <div role="header" class="logo">
         <img src="./images/logo.svg" alt="base-logo" />
       </div>
-      <div class="hero">
+      <div role="banner" class="hero">
         <picture>
           <source
             srcset="./images/hero-desktop.jpg"
@@ -28,8 +28,8 @@
           <img src="./images/hero-mobile.jpg" alt="female-model" />
         </picture>
       </div>
-      <div class="main">
-        <section class="text_block">
+      <section class="main">
+        <div class="text_block">
           <div class="text_block__title">
             <h1><span class="highlight">we're</span></h1>
             <h1>coming</h1>
@@ -40,8 +40,8 @@
             our new fashion store. Add your email below to stay up-to-date with
             announcements and our launch deals.
           </p>
-        </section>
-        <section class="email">
+        </div>
+        <div class="email">
           <div class="email_wrapper">
             <input
               type="email"
@@ -62,9 +62,9 @@
             <p class="msg_invalid hidden">Please provide a valid email.</p>
             <p class="msg_valid hidden">Email registered for updates</p>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p class="attribution">

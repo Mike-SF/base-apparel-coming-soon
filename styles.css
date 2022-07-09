@@ -46,6 +46,8 @@ p {
 }
 
 .container {
+  background: url(./images/bg-pattern-desktop.svg) left top / auto 100%
+    no-repeat;
   min-width: 375px;
   max-width: 100%;
   display: grid;
@@ -73,29 +75,6 @@ p {
   text-align: center;
 }
 
-@media only screen and (min-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 100%;
-    column-gap: 5rem;
-  }
-
-  .logo {
-    margin: 2rem 5rem;
-  }
-  .hero {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 2;
-    height: auto;
-  }
-
-  .main {
-    margin: 0 0 0 5rem;
-  }
-  .text_block {
-    text-align: left;
-  }
-}
 
 .text_block__title h1 {
   font-weight: 300;
@@ -117,6 +96,7 @@ p.text {
 }
 
 .email_wrapper {
+  background-color: var(--white);
   border: 1px solid var(--desaturated-red);
   border-radius: 50px;
   height: 3rem;
@@ -213,4 +193,31 @@ p.msg_invalid.hidden {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto 100%;
+  }
+
+  .logo {
+    margin: 5rem 0 2rem 7rem;
+  }
+  .hero {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    height: auto;
+  }
+
+  .main {
+    margin: 1rem 8rem 0 7rem;
+  }
+  .text_block {
+    text-align: left;
+  }
+
+  .text_block__title h1 {
+    font-size: 4rem;
+  }
 }
